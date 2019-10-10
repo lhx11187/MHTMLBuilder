@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHTMLBuilder", "MHTMLBuilder\MHTMLBuilder.csproj", "{D5BEF2DA-C603-4D26-8871-00B21E98B18C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHTMLBuilder.CustomException", "MHTMLBuilder.CustomException\MHTMLBuilder.CustomException.csproj", "{2ADA613F-0836-4B38-84F3-E4AB7A5938D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHTMLBuilder.CustomExceptionEnumerators", "MHTMLBuilder.CustomExceptionEnumerators\MHTMLBuilder.CustomExceptionEnumerators.csproj", "{709313DE-228B-47CC-828B-134BAFB11067}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHTMLBuilder.Tests", "MHTMLBuilder.Tests\MHTMLBuilder.Tests.csproj", "{EC179D0A-63A2-4C60-9F56-CC952A54EEFD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5BEF2DA-C603-4D26-8871-00B21E98B18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BEF2DA-C603-4D26-8871-00B21E98B18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BEF2DA-C603-4D26-8871-00B21E98B18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BEF2DA-C603-4D26-8871-00B21E98B18C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ADA613F-0836-4B38-84F3-E4AB7A5938D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADA613F-0836-4B38-84F3-E4AB7A5938D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADA613F-0836-4B38-84F3-E4AB7A5938D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADA613F-0836-4B38-84F3-E4AB7A5938D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709313DE-228B-47CC-828B-134BAFB11067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709313DE-228B-47CC-828B-134BAFB11067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709313DE-228B-47CC-828B-134BAFB11067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709313DE-228B-47CC-828B-134BAFB11067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC179D0A-63A2-4C60-9F56-CC952A54EEFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC179D0A-63A2-4C60-9F56-CC952A54EEFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC179D0A-63A2-4C60-9F56-CC952A54EEFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC179D0A-63A2-4C60-9F56-CC952A54EEFD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
