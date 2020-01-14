@@ -9,7 +9,7 @@ This is a fork of the [url2mhtml](https://code.google.com/archive/p/url2mhtml/) 
 
 # Introduction
 
-If you've ever used the **File | Save As...**menu in Internet Explorer, you might have noticed a few interesting options IE provides under the **Save As Type**drop-down box:
+If you've ever used the **File | Save As... **menu in Internet Explorer, you might have noticed a few interesting options IE provides under the **Save As Type **drop-down box:
 
 The options provided are:
 
