@@ -1,5 +1,5 @@
 # MHTMLBuilder
-This is a fork of [Jeff Atwoods](https://blog.codinghorror.com/about-me/) Code Project "[MhtBuilder](https://www.codeproject.com/script/Articles/ViewDownloads.aspx?aid=8268)" from 2005. The code for the fork was converted from VB to C# .NET Standard 3.x.
+This is a fork of [Jeff Atwoods](https://blog.codinghorror.com/about-me/) Code Project "[MhtBuilder](https://www.codeproject.com/script/Articles/ViewDownloads.aspx?aid=8268)" from 2005. The code for the fork was converted from VB to C# .NET Core 3.x.
 
 A native .NET class for saving URLs: text-only, HTML page, HTML archive, or HTML complete.
 
