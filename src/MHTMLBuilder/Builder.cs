@@ -555,7 +555,7 @@ namespace MHTMLBuilder
                 WebFile ef = (WebFile)de.Value;
                 AppendMhtFile(ef);
             }
-            AppendMhtBoundary();
+            AppendMhtBoundary(true);
         }
 
 
@@ -603,12 +603,19 @@ namespace MHTMLBuilder
         /// <summary>
         /// appends a boundary marker to our MhtBuilder
         /// </summary>
-        private void AppendMhtBoundary()
+        private void AppendMhtBoundary(bool endOfFile = false)
         {
             // I have replaced " ", with "". look into this later.
             AppendMhtLine(string.Empty);
-            AppendMhtLine("--" + _MimeBoundaryTag);
-            //AppendMhtLine(" ");
+
+            if (!endOfFile)
+            {
+                AppendMhtLine("--" + _MimeBoundaryTag);
+            }
+            else
+            {
+                AppendMhtLine("--" + _MimeBoundaryTag + "--");
+            }
         }
 
         /// <summary>
