@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.IO;
 using NUnit.Framework;
 
@@ -8,11 +9,12 @@ namespace MHTMLBuilder.Tests
     {
         private Builder MHTMLBuilder = new Builder();
         private String URL = "https://www.google.com";
-        private String fileLocation = "/tmp/test.mht";
+        private String fileLocation = @"C:\temp\test.mht";
 
         [SetUp]
         public void Setup()
         {
+            MHTMLBuilder.BrowserIdString = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36";
         }
 
         [Test]
@@ -28,14 +30,16 @@ namespace MHTMLBuilder.Tests
             }
             catch (CustomException.BuilderInvalidFileNameException e)
             {
-                Console.WriteLine("BuilderInvalidFileNameException is " + e.CustomMessage);
+                Assert.Fail(e.CustomMessage);
             }
             catch (CustomException.BuilderDownLoadHTMLException e)
             {
-                Console.WriteLine("BuilderDownLoadHTMLException " + e.CustomMessage);
+                Assert.Fail(e.CustomMessage);
             }
-
-            Assert.Pass();
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
         }
     }
 }
