@@ -510,8 +510,11 @@ namespace MHTMLBuilder
             {
                 _Url = url;
             }
+            if(url.Contains("https://"))
+                _UrlRoot = Regex.Match(url, "https://[^/'\"]+", RegexOptions.IgnoreCase).ToString();
+            else
             //-- http://mywebsite
-            _UrlRoot = Regex.Match(url, "http://[^/'\"]+", RegexOptions.IgnoreCase).ToString();
+                _UrlRoot = Regex.Match(url, "http://[^/'\"]+", RegexOptions.IgnoreCase).ToString();
             //-- http://mywebsite/myfolder
             if (_Url.LastIndexOf("/") > 7)
             {
@@ -595,7 +598,7 @@ namespace MHTMLBuilder
             Regex r = default(Regex);
 
             string urlPattern = "(?<attrib>\\shref|\\ssrc|\\sbackground)\\s*?=\\s*?" +
-                                "(?<delim1>[\"'\\\\]{0,2})(?!\\s*\\+|#|http:|ftp:|mailto:|javascript:)" +
+                                "(?<delim1>[\"'\\\\]{0,2})(?!\\s*\\+|#|http:|https:|ftp:|mailto:|javascript:)" +
                                 "/(?<url>[^\"'>\\\\]+)(?<delim2>[\"'\\\\]{0,2})";
 
             string cssPattern = "(?<attrib>@import\\s|\\S+-image:|background:)\\s*?(url)*['\"(]{1,2}" +
@@ -616,6 +619,9 @@ namespace MHTMLBuilder
             //-- @import(anything) to @import url(http://www.web.com/folder/anything)
             r = new Regex(cssPattern.Replace("/", ""), RegexOptions.IgnoreCase | RegexOptions.Multiline);
             html = r.Replace(html, "${attrib} url(" + _UrlFolder + "/${url})");
+
+            //-- base64 image
+            html = html.Replace(_UrlRoot + "/data:image/png;base64", "data:image/png;base64");
 
             return html;
         }
